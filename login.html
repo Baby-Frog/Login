@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="shortcut icon" type="image/jpg"
+        href="https://i.pinimg.com/564x/b9/dc/84/b9dc845a81388bfc4c8afcc45a4e1721.jpg">
+</head>
+
+<body>
+    <div class="main_box">
+        <div class="box_inner">
+            <div class="box1">
+                <div class="text">
+                    <img  src="../img/sea1.jpg" alt="">
+                    <h3>Welcome!</h3>
+                    <p>Already have an account</p>
+                    <button class="signin_btn">Sign in</button>
+                </div>
+                <div class="text">
+                    <img src="../img/sea2.jpg" alt="">
+                    <h3>Hello!</h3>
+                    <p>You dont have account?</p>
+                    <button class="signup_btn">Sign up</button>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="form_box">
+                    <div class="forms login">
+                        <h2>Sign in</h2>
+                        <div class="input_box">
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <a href="../html/forgot.html">
+                            <span>Forgot password?</span>
+                        </a>
+                        <input type="button" value="Login">
+                    </div>
+                    <div class="forms register">
+                        <h2>Sign up</h2>
+                        <div class="input_box">
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Confirm Password ">
+                            <input type="button" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var signin_btn = document.querySelector(".signin_btn");
+                var signup_btn = document.querySelector(".signup_btn");
+                var box2 = document.querySelector(".box2");
+
+                var login = document.querySelector(".login");
+                var register = document.querySelector(".register")
+
+                signup_btn.addEventListener("click", function () {
+                    box2.classList.add('active');
+                    login.classList.add('active');
+                    register.classList.add('active');
+                })
+
+                signin_btn.addEventListener("click", function () {
+                    box2.classList.remove('active');
+                    login.classList.remove('active');
+                    register.classList.remove('active');
+                })
+
+            </script>
+</body>
+
+</html>
